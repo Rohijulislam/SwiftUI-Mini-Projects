@@ -16,6 +16,17 @@
 		B4C6C6D62CA83550000E6A5B /* Hello_WorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6D52CA83550000E6A5B /* Hello_WorldUITestsLaunchTests.swift */; };
 		B4C6C6E32CA835EF000E6A5B /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6E22CA835EF000E6A5B /* HelloWorld.swift */; };
 		B4C6C6E42CA835EF000E6A5B /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6E22CA835EF000E6A5B /* HelloWorld.swift */; };
+		B4C6C6E82CA83793000E6A5B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6E72CA83793000E6A5B /* NetworkManager.swift */; };
+		B4C6C6E92CA83793000E6A5B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6E72CA83793000E6A5B /* NetworkManager.swift */; };
+		B4C6C6EB2CA83A5B000E6A5B /* HelloWorldAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6EA2CA83A5B000E6A5B /* HelloWorldAPI.swift */; };
+		B4C6C6EC2CA83A5B000E6A5B /* HelloWorldAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6EA2CA83A5B000E6A5B /* HelloWorldAPI.swift */; };
+		B4C6C6EF2CA83E17000E6A5B /* HelloWorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6EE2CA83E17000E6A5B /* HelloWorldViewModel.swift */; };
+		B4C6C6F22CA83E4E000E6A5B /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6F12CA83E4E000E6A5B /* HelloWorldView.swift */; };
+		B4C6C6F42CA846A3000E6A5B /* HelloWorldViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6F32CA846A3000E6A5B /* HelloWorldViewModelTests.swift */; };
+		B4C6C6F52CA846D2000E6A5B /* HelloWorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6EE2CA83E17000E6A5B /* HelloWorldViewModel.swift */; };
+		B4C6C6F72CA849FA000E6A5B /* MockHelloWorldAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6F62CA849FA000E6A5B /* MockHelloWorldAPI.swift */; };
+		B4C6C6F92CA879FB000E6A5B /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6F82CA879FB000E6A5B /* APIRequestProtocol.swift */; };
+		B4C6C6FA2CA87B8C000E6A5B /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C6F82CA879FB000E6A5B /* APIRequestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +58,13 @@
 		B4C6C6D32CA83550000E6A5B /* Hello_WorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldUITests.swift; sourceTree = "<group>"; };
 		B4C6C6D52CA83550000E6A5B /* Hello_WorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4C6C6E22CA835EF000E6A5B /* HelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
+		B4C6C6E72CA83793000E6A5B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B4C6C6EA2CA83A5B000E6A5B /* HelloWorldAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAPI.swift; sourceTree = "<group>"; };
+		B4C6C6EE2CA83E17000E6A5B /* HelloWorldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldViewModel.swift; sourceTree = "<group>"; };
+		B4C6C6F12CA83E4E000E6A5B /* HelloWorldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldView.swift; sourceTree = "<group>"; };
+		B4C6C6F32CA846A3000E6A5B /* HelloWorldViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldViewModelTests.swift; sourceTree = "<group>"; };
+		B4C6C6F62CA849FA000E6A5B /* MockHelloWorldAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHelloWorldAPI.swift; sourceTree = "<group>"; };
+		B4C6C6F82CA879FB000E6A5B /* APIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				B4C6C6B82CA8354F000E6A5B /* Hello_WorldApp.swift */,
-				B4C6C6E62CA83649000E6A5B /* View */,
 				B4C6C6BC2CA83550000E6A5B /* Assets.xcassets */,
 				B4C6C6BE2CA83550000E6A5B /* Preview Content */,
+				B4C6C6E62CA83649000E6A5B /* View */,
+				B4C6C6ED2CA83E09000E6A5B /* ViewModel */,
 				B4C6C6E52CA835F6000E6A5B /* Model */,
 			);
 			path = "Hello-World";
@@ -118,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				B4C6C6C92CA83550000E6A5B /* Hello_WorldTests.swift */,
+				B4C6C6F32CA846A3000E6A5B /* HelloWorldViewModelTests.swift */,
+				B4C6C6F62CA849FA000E6A5B /* MockHelloWorldAPI.swift */,
 			);
 			path = "Hello-WorldTests";
 			sourceTree = "<group>";
@@ -135,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C6C6E22CA835EF000E6A5B /* HelloWorld.swift */,
+				B4C6C6FB2CA87FD8000E6A5B /* Networking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,8 +165,27 @@
 			isa = PBXGroup;
 			children = (
 				B4C6C6BA2CA8354F000E6A5B /* ContentView.swift */,
+				B4C6C6F12CA83E4E000E6A5B /* HelloWorldView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B4C6C6ED2CA83E09000E6A5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4C6C6EE2CA83E17000E6A5B /* HelloWorldViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4C6C6FB2CA87FD8000E6A5B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B4C6C6E72CA83793000E6A5B /* NetworkManager.swift */,
+				B4C6C6EA2CA83A5B000E6A5B /* HelloWorldAPI.swift */,
+				B4C6C6F82CA879FB000E6A5B /* APIRequestProtocol.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C6C6F92CA879FB000E6A5B /* APIRequestProtocol.swift in Sources */,
+				B4C6C6E82CA83793000E6A5B /* NetworkManager.swift in Sources */,
 				B4C6C6BB2CA8354F000E6A5B /* ContentView.swift in Sources */,
 				B4C6C6E32CA835EF000E6A5B /* HelloWorld.swift in Sources */,
 				B4C6C6B92CA8354F000E6A5B /* Hello_WorldApp.swift in Sources */,
+				B4C6C6F22CA83E4E000E6A5B /* HelloWorldView.swift in Sources */,
+				B4C6C6EF2CA83E17000E6A5B /* HelloWorldViewModel.swift in Sources */,
+				B4C6C6EB2CA83A5B000E6A5B /* HelloWorldAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C6C6FA2CA87B8C000E6A5B /* APIRequestProtocol.swift in Sources */,
+				B4C6C6F42CA846A3000E6A5B /* HelloWorldViewModelTests.swift in Sources */,
+				B4C6C6EC2CA83A5B000E6A5B /* HelloWorldAPI.swift in Sources */,
+				B4C6C6F72CA849FA000E6A5B /* MockHelloWorldAPI.swift in Sources */,
+				B4C6C6E92CA83793000E6A5B /* NetworkManager.swift in Sources */,
 				B4C6C6CA2CA83550000E6A5B /* Hello_WorldTests.swift in Sources */,
+				B4C6C6F52CA846D2000E6A5B /* HelloWorldViewModel.swift in Sources */,
 				B4C6C6E42CA835EF000E6A5B /* HelloWorld.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

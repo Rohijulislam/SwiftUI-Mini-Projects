@@ -10,4 +10,4 @@ This is a simple **Hello World** app built using **SwiftUI**. The app demonstrat
 
 ## ScreenShots
 
-![HelloWorld ](./hello_world.gif)
+![HelloWorld ](hello_world.gif)

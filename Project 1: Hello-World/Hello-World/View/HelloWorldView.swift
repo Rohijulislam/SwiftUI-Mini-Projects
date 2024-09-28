@@ -16,6 +16,22 @@ struct HelloWorldView: View {
                 Text(helloWorld.message)
                     .font(.largeTitle)
                     .padding()
+                    .scaleEffect(viewModel.scale)
+                    .overlay(
+                        Text(helloWorld.message)
+                            .font(.largeTitle)
+                            .padding()
+                            .foregroundColor(viewModel.colors[viewModel.currentColorIndex])
+                            .mask(
+                                LinearGradient(gradient: Gradient(colors: viewModel.colors), startPoint: .leading, endPoint: .trailing)
+                                    .frame(width: viewModel.isAnimating ? 0 : nil)
+                                    .animation(.easeInOut(duration: viewModel.animationInterval).repeatForever(), value: viewModel.isAnimating)
+                            )
+                            .scaleEffect(viewModel.scale)
+                    )
+                    .onAppear {
+                        viewModel.startAnimations()
+                    }
             } else if let errorMessage = viewModel.errorMessage {
                 Text(errorMessage)
                     .foregroundColor(.red)

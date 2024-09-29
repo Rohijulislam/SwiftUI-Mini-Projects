@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B4C6C7092CA8A5CC000E6A5B /* TimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7082CA8A5CC000E6A5B /* TimerAppApp.swift */; };
-		B4C6C70B2CA8A5CC000E6A5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C70A2CA8A5CC000E6A5B /* ContentView.swift */; };
 		B4C6C70D2CA8A5CD000E6A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C6C70C2CA8A5CD000E6A5B /* Assets.xcassets */; };
 		B4C6C7102CA8A5CD000E6A5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C6C70F2CA8A5CD000E6A5B /* Preview Assets.xcassets */; };
 		B4C6C71A2CA8A5CD000E6A5B /* TimerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7192CA8A5CD000E6A5B /* TimerAppTests.swift */; };
 		B4C6C7242CA8A5CD000E6A5B /* TimerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7232CA8A5CD000E6A5B /* TimerAppUITests.swift */; };
 		B4C6C7262CA8A5CD000E6A5B /* TimerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7252CA8A5CD000E6A5B /* TimerAppUITestsLaunchTests.swift */; };
+		B4C6C7332CA8A6FC000E6A5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7322CA8A6FC000E6A5B /* TimerView.swift */; };
+		B4C6C7352CA8A763000E6A5B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7342CA8A763000E6A5B /* CircularProgressView.swift */; };
+		B4C6C7372CA8AC59000E6A5B /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6C7362CA8AC59000E6A5B /* TimePickerView.swift */; };
+		B4FF9B572CA98FD9006EFAFD /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B562CA98FD9006EFAFD /* TimerViewModel.swift */; };
+		B4FF9B5B2CA9DD97006EFAFD /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B5A2CA9DD97006EFAFD /* TimerState.swift */; };
+		B4FF9B5E2CA9DDE7006EFAFD /* TimePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B5D2CA9DDE7006EFAFD /* TimePickerViewModel.swift */; };
+		B4FF9B602CA9DE2D006EFAFD /* TimeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B5F2CA9DE2D006EFAFD /* TimeControlView.swift */; };
+		B4FF9B632CA9DEA2006EFAFD /* TimerControlButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B622CA9DEA2006EFAFD /* TimerControlButtonStyle.swift */; };
+		B4FF9B662CA9DF30006EFAFD /* ButtonStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B652CA9DF30006EFAFD /* ButtonStyle+Extension.swift */; };
+		B4FF9B682CA9E05F006EFAFD /* TimeTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9B672CA9E05F006EFAFD /* TimeTrackingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		B4C6C7052CA8A5CC000E6A5B /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C6C7082CA8A5CC000E6A5B /* TimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppApp.swift; sourceTree = "<group>"; };
-		B4C6C70A2CA8A5CC000E6A5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4C6C70C2CA8A5CD000E6A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4C6C70F2CA8A5CD000E6A5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4C6C7152CA8A5CD000E6A5B /* TimerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,16 @@
 		B4C6C71F2CA8A5CD000E6A5B /* TimerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C6C7232CA8A5CD000E6A5B /* TimerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppUITests.swift; sourceTree = "<group>"; };
 		B4C6C7252CA8A5CD000E6A5B /* TimerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4C6C7322CA8A6FC000E6A5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		B4C6C7342CA8A763000E6A5B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		B4C6C7362CA8AC59000E6A5B /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		B4FF9B562CA98FD9006EFAFD /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		B4FF9B5A2CA9DD97006EFAFD /* TimerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		B4FF9B5D2CA9DDE7006EFAFD /* TimePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewModel.swift; sourceTree = "<group>"; };
+		B4FF9B5F2CA9DE2D006EFAFD /* TimeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControlView.swift; sourceTree = "<group>"; };
+		B4FF9B622CA9DEA2006EFAFD /* TimerControlButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControlButtonStyle.swift; sourceTree = "<group>"; };
+		B4FF9B652CA9DF30006EFAFD /* ButtonStyle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Extension.swift"; sourceTree = "<group>"; };
+		B4FF9B672CA9E05F006EFAFD /* TimeTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				B4C6C7082CA8A5CC000E6A5B /* TimerAppApp.swift */,
-				B4C6C70A2CA8A5CC000E6A5B /* ContentView.swift */,
 				B4C6C70C2CA8A5CD000E6A5B /* Assets.xcassets */,
 				B4C6C70E2CA8A5CD000E6A5B /* Preview Content */,
+				B4FF9B582CA9DD64006EFAFD /* View */,
+				B4FF9B592CA9DD6F006EFAFD /* Model */,
+				B4FF9B5C2CA9DDA5006EFAFD /* ViewModel */,
+				B4FF9B612CA9DE6F006EFAFD /* CustomControl */,
+				B4FF9B642CA9DF00006EFAFD /* Extension */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -125,6 +147,51 @@
 				B4C6C7252CA8A5CD000E6A5B /* TimerAppUITestsLaunchTests.swift */,
 			);
 			path = TimerAppUITests;
+			sourceTree = "<group>";
+		};
+		B4FF9B582CA9DD64006EFAFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4C6C7322CA8A6FC000E6A5B /* TimerView.swift */,
+				B4C6C7362CA8AC59000E6A5B /* TimePickerView.swift */,
+				B4C6C7342CA8A763000E6A5B /* CircularProgressView.swift */,
+				B4FF9B5F2CA9DE2D006EFAFD /* TimeControlView.swift */,
+				B4FF9B672CA9E05F006EFAFD /* TimeTrackingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4FF9B592CA9DD6F006EFAFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4FF9B5A2CA9DD97006EFAFD /* TimerState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4FF9B5C2CA9DDA5006EFAFD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4FF9B562CA98FD9006EFAFD /* TimerViewModel.swift */,
+				B4FF9B5D2CA9DDE7006EFAFD /* TimePickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4FF9B612CA9DE6F006EFAFD /* CustomControl */ = {
+			isa = PBXGroup;
+			children = (
+				B4FF9B622CA9DEA2006EFAFD /* TimerControlButtonStyle.swift */,
+			);
+			path = CustomControl;
+			sourceTree = "<group>";
+		};
+		B4FF9B642CA9DF00006EFAFD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B4FF9B652CA9DF30006EFAFD /* ButtonStyle+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +324,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C6C70B2CA8A5CC000E6A5B /* ContentView.swift in Sources */,
+				B4FF9B682CA9E05F006EFAFD /* TimeTrackingView.swift in Sources */,
+				B4C6C7332CA8A6FC000E6A5B /* TimerView.swift in Sources */,
+				B4FF9B662CA9DF30006EFAFD /* ButtonStyle+Extension.swift in Sources */,
+				B4FF9B632CA9DEA2006EFAFD /* TimerControlButtonStyle.swift in Sources */,
+				B4FF9B5E2CA9DDE7006EFAFD /* TimePickerViewModel.swift in Sources */,
+				B4C6C7352CA8A763000E6A5B /* CircularProgressView.swift in Sources */,
+				B4FF9B602CA9DE2D006EFAFD /* TimeControlView.swift in Sources */,
 				B4C6C7092CA8A5CC000E6A5B /* TimerAppApp.swift in Sources */,
+				B4FF9B572CA98FD9006EFAFD /* TimerViewModel.swift in Sources */,
+				B4FF9B5B2CA9DD97006EFAFD /* TimerState.swift in Sources */,
+				B4C6C7372CA8AC59000E6A5B /* TimePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,36 +9,19 @@ import Foundation
 import AudioToolbox
 
 class TimerViewModel: ObservableObject {
+    @Published var progress: Float = 0.0
+    @Published var remainingTimeInSeconds = 0
+    @Published var isFinishedPlayingTimer: Bool = false
     @Published var state: TimerState = .idle {
         didSet {
-            // Apply condition after the state changes
-            if state != .idle, totalTimeSelectedInSeconds == 0 {
-                state = .idle
-                print("Reverted to idle since no time was selected.")
-            } else {
-                switch state {
-                case .idle:
-                    stopTimer()
-                    remainingTimeInSeconds = 0
-                    totalTimeSelectedInSeconds = 0
-                case .paused, .restart:
-                    stopTimer()
-                case .running:
-                    progress = 1.0
-                    remainingTimeInSeconds = totalTimeSelectedInSeconds
-                    startTimer()
-                case .resumed:
-                    startTimer()
-                }
-            }
+            handleStateChange()
         }
     }
     
-    @Published var progress: Float = 0.0
-    @Published var remainingTimeInSeconds = 0
     var totalTimeSelectedInSeconds: Int = 0
     private var timer: Timer?
-    @Published var isFinishedPlayingTimer: Bool = false
+    
+    // MARK: - Public methods
     
     func formattedTimeStamp() -> String {
         let hour = remainingTimeInSeconds / 3600
@@ -53,27 +36,72 @@ class TimerViewModel: ObservableObject {
         isFinishedPlayingTimer = false
     }
     
+    // MARK: - Private methods
+    
+    private func handleStateChange() {
+        guard totalTimeSelectedInSeconds > 0 else {
+            revertToIdleState()
+            return
+        }
+        
+        switch state {
+        case .idle:
+            resetTimer()
+        case .paused, .restart:
+            stopTimer()
+        case .running:
+            startRunningTimer()
+        case .resumed:
+            startTimer()
+        }
+    }
+    
+    private func revertToIdleState() {
+        guard state != .idle else { return }
+        state = .idle
+        print("Reverted to idle since no time was selected.")
+    }
+    
+    private func handleTimerCompletion() {
+        remainingTimeInSeconds = 0
+        if state != .idle {
+            state = .restart
+            isFinishedPlayingTimer = true
+        }
+    }
+    
 }
 
 extension TimerViewModel {
     
-    func startTimer() {
+    private func startTimer() {
         stopTimer()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
             guard let self else { return }
             self.remainingTimeInSeconds -= 1
             self.progress = Float(self.remainingTimeInSeconds) / Float(self.totalTimeSelectedInSeconds)
-            if self.remainingTimeInSeconds < 0, self.state != .idle {
-                self.state = .restart
-                self.isFinishedPlayingTimer = true
+            if self.remainingTimeInSeconds < 0 {
+                self.handleTimerCompletion()
             }
-            
             print("Time remaining : \(self.remainingTimeInSeconds) sec")
         })
     }
     
-    func stopTimer() {
+    private func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
+    
+    private func startRunningTimer() {
+        progress = 1.0
+        remainingTimeInSeconds = totalTimeSelectedInSeconds
+        startTimer()
+    }
+    
+    private func resetTimer() {
+        stopTimer()
+        remainingTimeInSeconds = 0
+        totalTimeSelectedInSeconds = 0
+    }
+    
 }

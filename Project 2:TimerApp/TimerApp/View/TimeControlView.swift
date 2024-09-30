@@ -12,53 +12,36 @@ struct TimeControlView: View {
     
     var body: some View {
         HStack(spacing: 30) {
-            
-            Button(action: {
-                self.timerState = .idle
-            }, label: {
-                Text("Cancel")
-                    .fontWeight(.semibold)
-            }).buttonStyle(.cancel)
-            
+            ActionButton(title: "Cancel", action: { timerState = .idle }, style: .cancel)
             Spacer()
-            
             switch timerState {
             case .idle:
-                Button(action: {
-                    self.timerState = .running
-                }, label: {
-                    Text("Start")
-                        .fontWeight(.semibold)
-                })
-                .buttonStyle(.start)
+                ActionButton(title: "Start", action: { timerState = .running }, style: .start)
             case .running, .resumed:
-                Button(action: {
-                    self.timerState = .paused
-                }, label: {
-                    Text("Pause")
-                        .fontWeight(.semibold)
-                }).buttonStyle(.pause)
+                ActionButton(title: "Pause", action: { timerState = .paused }, style: .pause)
             case .paused:
-                Button(action: {
-                    self.timerState = .resumed
-                }, label: {
-                    Text("Resume")
-                        .fontWeight(.semibold)
-                }).buttonStyle(.resume)
-                
+                ActionButton(title: "Resume", action: { timerState = .resumed }, style: .resume)
             case .restart:
-                Button(action: {
-                    self.timerState = .running
-                }, label: {
-                    Text("Restart")
-                        .fontWeight(.semibold)
-                }).buttonStyle(.resume)
-                
+                ActionButton(title: "Restart", action: { timerState = .running }, style: .resume)
             }
             
         }
         .padding()
         .animation(.easeInOut, value: timerState) // Animate button appearance
+    }
+}
+
+struct ActionButton: View {
+    var title: String
+    var action: () -> Void
+    var style: TimerControlButtonStyle
+    
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .fontWeight(.semibold)
+        }
+        .buttonStyle(style)
     }
 }
 

@@ -30,7 +30,6 @@ struct CircularProgressView: View {
                 .animation(.spring(response: 1.0, dampingFraction: 0.6, blendDuration: 0.3), value: progress)
         }
         .padding()
-        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }
 

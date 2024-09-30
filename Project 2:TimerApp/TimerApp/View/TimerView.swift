@@ -12,21 +12,23 @@ struct TimerView: View {
     var body: some View {
         VStack(spacing: 40) {
             if viewModel.state == .idle {
-                TimePickerView { sec in
-                    viewModel.totalTimeSelectedInSeconds = sec
+                TimePickerView { selectedSeconds in
+                    viewModel.totalTimeSelectedInSeconds = selectedSeconds
                 }
             } else {
                 TimeTrackingView(progress: $viewModel.progress, remainingTimeInSeconds: $viewModel.remainingTimeInSeconds)
             }
+            
             TimeControlView(timerState: $viewModel.state)
             Spacer()
         }
-        .padding(.all, 40)
+        .padding(40)
         .onReceive(viewModel.$isFinishedPlayingTimer) { isFinished in
             if isFinished {
                 viewModel.playSystemSound()
             }
         }
+        .preferredColorScheme(.dark)
     }
 }
 

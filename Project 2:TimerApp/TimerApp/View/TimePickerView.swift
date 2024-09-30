@@ -33,7 +33,7 @@ struct TimePickerView: View {
             Text("Total Time in Seconds: \(viewModel.totalTimeInSeconds)")
                 .font(.headline)
                 .padding()
-                .onChange(of: viewModel.totalTimeInSeconds) { oldValue, newValue in
+                .onChange(of: viewModel.totalTimeInSeconds) { _, newValue in
                     onTimeSelected(newValue)
                 }
         }
@@ -42,7 +42,7 @@ struct TimePickerView: View {
         .shadow(radius: 8)
         .navigationTitle("Time Picker")
         .preferredColorScheme(.dark)
-        .padding(.all, 30)
+        .padding(30)
     }
 }
 
